@@ -1,0 +1,952 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root{
+  --cyan:cyan;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none; border:none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+*::selection{
+  background:var(--cyan);
+  color:cyan;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+section{
+  padding:2rem 9%;
+}
+
+
+/* style untuk judul per page*/
+.heading{
+  text-align: center;
+  padding:2.5rem 0
+
+}
+
+.heading span{
+  font-size: 3.5rem;
+  background:#e2af90;
+  color:var(--cyan);
+  border-radius: .5rem;
+  padding:.2rem 1rem;
+  box-shadow: 0 1rem 2rem grey;
+}
+
+.heading span.space{
+  background:none;
+  box-shadow: none;
+}
+
+/* style untuk button*/
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  background:none;
+  color:cyan;
+  font-weight: 600;
+  padding:.8rem 3rem;
+  border:.2rem solid var(--cyan);
+  font-size: 1.7rem;
+  border-radius: 8px;
+}
+.btn:hover{
+  background:var(--cyan);
+  color:#fff;
+}
+
+/* style untuk header atau navigation bar*/
+header{
+  position: fixed;
+  top:0; left: 0; right:0;
+  background:gray;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:2rem 9%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+header .logo{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color:#fff;
+}
+
+header .logo i{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color:gold;
+  padding-right: 0.5rem;
+}
+
+header .logo span{
+  color:var(--cyan);
+}
+
+header .navbar a{
+  color:#fff;
+  font-size: 2rem;
+  margin:1rem;
+  font-weight: 500;
+  background-color: grey;
+  border-radius: 30%;
+}
+
+header .navbar a:hover{
+  background-color: #e2af90;
+  border-radius: 6%;
+  color: #fff;
+
+}
+
+header .icons i{
+  font-size: 2.2rem;
+  color:white;
+  cursor: pointer;
+  margin-right: 2.2rem;
+}
+
+header .icons i:hover{
+  color:var(--cyan);
+}
+
+header .search-bar-container{
+  position: absolute;
+  top:100%; left: 0; right:0;
+  padding:1.5rem 2rem;
+  background:grey;
+  border-top: .1rem solid rgba(255,255,255,.2);
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-bar-container.active{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search-bar-container #search-bar{
+  width:100%;
+  padding:1rem;
+  text-transform: none;
+  color:black;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+}
+
+header .search-bar-container label{
+  color:#fff;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover{
+  color:var(--cyan);
+}
+
+/* style untuk login button*/
+.login-form-container{
+  position: fixed;
+  top:-120%; left: 0;
+  z-index: 10000;
+  min-height: 100vh;
+  width:100%;
+  background:rgba(0,0,0,.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form-container.active{
+  top:0;
+}
+
+.login-form-container form{
+  margin:2rem;
+  padding:1.5rem 2rem;
+  border-radius: .5rem;
+  background:#fff;
+  width:50rem;
+}
+
+.login-form-container form h3{
+  font-size: 3rem;
+  color:#444;
+  text-transform: uppercase;
+  text-align: center;
+  padding:1rem 0;
+}
+
+.login-form-container form .box{
+  width:100%;
+  padding:1rem;
+  font-size: 1.7rem;
+  color:#333;
+  margin:.6rem 0;
+  border:.1rem solid rgba(0,0,0,.3);
+  text-transform: none;
+}
+
+.login-form-container form .box:focus{
+  border-color: var(--cyan);;
+}
+
+.login-form-container form #remember{
+  margin:2rem 0;
+}
+
+.login-form-container form label{
+  font-size: 1.5rem;
+}
+
+.login-form-container form .btn{
+  display: block;
+  width:100%;
+}
+
+.login-form-container form p{
+  padding:.5rem 0;
+  font-size: 1.5rem;
+  color:#666;
+}
+
+.login-form-container form p a{
+  color:var(--cyan);
+  font-weight: 500;
+}
+
+.login-form-container form p a:hover{
+  color:#333;
+  text-decoration: underline;
+}
+
+.login-form-container #form-close{
+  position: absolute;
+  top:2rem; right:3rem;
+  font-size: 5rem;
+  color:#fff;
+  cursor: pointer;
+}
+
+/* style untuk menu bar saat responsive*/
+#menu-bar{
+  color:#fff;
+  border:.1rem solid #fff;
+  border-radius: .5rem;
+  font-size: 3rem;
+  padding:.5rem 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* style untuk page home*/
+.home{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+}
+
+.home .content{
+  text-align: center;
+}
+
+.home .content h3{
+  font-size: 3.0rem;
+  color:cyan;
+  text-transform: none;
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+}
+
+.home .content p{
+  font-size: 2.5rem;
+  color:var(--cyan);
+  text-transform: none;
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-weight: 500;
+}
+
+.home .content p span{
+  color: gold;
+  font-weight: 500;
+}
+
+
+
+.home .video-container video{
+  position: absolute;
+  top:0; left: 0;
+  z-index: -1;
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.home .controls{
+  padding:1rem;
+  border-radius: 5rem;
+  background:rgba(0,0,0,.7);
+  position: relative;
+  top:10rem;
+}
+
+.home .controls .vid-btn{
+  height:2rem;
+  width:2rem;
+  display: inline-block;
+  border-radius: 50%;
+  background:#fff;
+  cursor: pointer;
+  margin:0 .5rem;
+}
+
+.home .controls .vid-btn.active{
+  background:var(--cyan);
+}
+
+/* style untuk page booking*/
+.book .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
+}
+
+.book .row .image{
+  flex:1 1 40rem;
+}
+
+.book .row .image h3{
+  flex:1 1 40rem;
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 2rem;
+  color: crimson;
+}
+
+.book .row .image img{
+  width:100%;
+  outline: grey;
+  border-radius: 10%;
+  box-shadow:0 0.3rem 1rem gold;
+}
+
+.book .row .image img:hover{
+  flex:1 1 40rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem cyan;
+  border-radius: 5rem;
+
+}
+
+.book .row form{
+  flex:1 1 40rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem gray;
+  border-radius: .5rem;
+}
+
+.book .row form:hover{
+  flex:1 1 40rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem cyan;
+  border-radius: .5rem;
+}
+
+.book .row form .inputBox{
+  padding:.5rem 0;
+}
+
+.book .row form .inputBox input{
+  width:100%;
+  padding:1rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  font-size: 1.7rem;
+  color:#333;
+  text-transform: none;
+}
+
+.book .row form .inputBox h3{
+  font-size: 2rem;
+  padding:1rem 0;
+  color:#666;
+}
+
+/* style untuk page packages*/
+
+.packages{
+  background: url("assets/background.webp") no-repeat center;
+  
+  }
+.packages .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+  
+}
+
+.packages .box-container .box{
+  flex:1 1 30rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  background-color: rgba(255,255,255,.2);
+}
+
+.packages .box-container .box:hover{
+  box-shadow: 0 1rem 2rem gold;
+}
+
+.packages .box-container .box img{
+  height: 25rem;
+  width:100%;
+  object-fit: cover;
+}
+
+.packages .box-container .box .content{
+  padding:2rem;
+}
+
+.packages .box-container .box .content h3{
+  font-size:2rem;
+  color:#333;
+}
+
+.packages .box-container .box .content h3 i{
+  color:orange;
+}
+
+.packages .box-container .box .content a{
+  font-size: 1.5rem;
+}
+
+.packages .box-container .box .content p{
+  font-size:1.7rem;
+  color:#666;
+  padding:1rem 0;
+}
+
+.packages .box-container .box .content .stars i{
+  font-size:1.7rem;
+  color:orange;
+}
+
+.packages .box-container .box .content .stars a{
+  font-size: 1.7rem;
+  
+}
+
+.packages .box-container .box .content .price{
+  font-size: 2rem;
+  color:#333;
+  padding-top: 1rem;
+}
+
+.packages .box-container .box .content .price span{
+  color:crimson;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+
+/* style untuk page shop*/
+.back{
+  font-size: 2rem;
+  font-weight: bolder;
+  color:black;
+  font-style: normal;
+  margin-left: 2rem;
+  border-top: 5rem;
+}
+
+.back i{
+  font-size: 2rem;
+  font-weight: bolder;
+  color:gold;
+  padding-right: 1rem;
+
+}
+
+.shop{
+  background: url("assets/background.webp") no-repeat center;
+}
+
+.shop .icon{
+  font-size: 2.2rem;
+  color:gold;
+  cursor: pointer;
+  margin-right: 2.2rem;
+  padding-top: 5rem;
+}
+
+.shop {
+  font-size: 2.2rem;
+  color:gold;
+  cursor: pointer;
+  margin-right: 2.2rem;
+  padding-top: 5rem;
+}
+.shop .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+}
+
+.shop .box-container .box{
+  flex:1 1 30rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.shop .box-container .box:hover{
+  box-shadow: 0 1rem 2rem gold;
+}
+
+.shop .box-container .box img{
+  height: 25rem;
+  width:100%;
+  object-fit: cover;
+}
+
+.shop .box-container .box .content{
+  padding:2rem;
+}
+
+.shop .box-container .box .content h3{
+  font-size:2rem;
+  color:#333;
+}
+
+.shop .box-container .box .content h3 i{
+  color:orange;
+}
+
+.shop .box-container .box .content p{
+  font-size:1.7rem;
+  color:#666;
+  padding:1rem 0;
+}
+
+.shop .box-container .box .content .stars i{
+  font-size:1.7rem;
+  color:orange;
+}
+
+.shop .box-container .box .content .stars i span{
+  font-size:1.7rem;
+  color:black;
+  font-weight: normal;
+}
+
+.shop .box-container .box .content .price{
+  font-size: 2rem;
+  color:#333;
+  padding-top: 1rem;
+}
+
+.shop .box-container .box .content .price span{
+  color:crimson;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+
+/* style untuk page services*/
+.services .box-container{
+  display: flex;
+  background: url();
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.services .box-container .box{
+  flex: 1 1 30rem;
+  border-radius: .5rem;
+  padding:1rem;
+  text-align: center;
+}
+
+.services .box-container .box i{
+  padding:1rem;
+  font-size: 5rem;
+  color:var(--orange);
+}
+
+.services .box-container .box h3{
+  font-size: 2.5rem;
+  color:#333;
+}
+
+.services .box-container .box p{
+  font-size: 1.5rem;
+  color:#666;
+  padding:1rem 0;
+}
+
+.services .box-container .box:hover{
+  box-shadow: 0 1rem 2rem cyan;
+}
+
+/* style untuk page gallery*/
+.gallery .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.gallery .box-container .box{
+  overflow: hidden;
+  box-shadow: 0 1rem 1.5rem gray;
+  border:1rem solid #fff;
+  border-radius: .5rem;
+  flex:1 1 30rem;
+  height: 25rem;
+  position: relative;
+}
+
+.gallery .box-container .box img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.gallery .box-container .box .content{
+  position: absolute;
+  top:-100%; left:0;
+  height: 100%;
+  width:100%;
+  text-align: center;
+  background:rgba(0,0,0,.7);
+  padding:2rem;
+  padding-top: 5rem;
+}
+
+.gallery .box-container .box:hover .content{
+  top:0;
+}
+
+.gallery .box-container .box .content h3{
+  font-size: 2.5rem;
+  color:#fff;
+}
+
+.gallery .box-container .box .content p{
+  font-size: 1.5rem;
+  color:#eee;
+  padding:.5rem 0;
+}
+
+/* style untuk page review*/
+.review .review-slider{
+  padding-bottom: 2rem;
+}
+
+.review .box{
+  padding:2rem;
+  text-align: center;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border-radius: 8%;
+  background: gray;
+}
+
+.review .box img{
+  height:13rem;
+  width:13rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.review .box h3{
+  color:#f7f7f7;
+  font-size: 2.5rem;
+}
+
+.review .box p{
+  color: #fff;;
+  font-size: 1.5rem;
+  padding:1rem 0;
+}
+
+.review .box .stars i{
+  color:gold;
+  font-size: 1.7rem;
+}
+
+/* style untuk page contact*/
+.contact .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
+}
+
+.contact .row .image{
+  flex:1 1 35rem;
+}
+
+.contact .row .image img{
+  width: 400px;
+  height: 500px;
+  border-radius: 10%;
+  box-shadow: 0 1rem 2rem grey;
+}
+
+.contact .row form{
+  flex:1 1 50rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+}
+
+.contact .row form:hover{
+  box-shadow: 0 1rem 2rem cyan;
+}
+
+.contact .row form .inputBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact .row form .inputBox input, .contact .row form textarea{
+  width:49%;
+  margin:1rem 0;
+  padding:1rem;
+  font-size: 1.7rem;
+  color:#333;
+  background:#f7f7f7;
+  text-transform: none;
+}
+
+.contact .row form textarea{
+  height: 15rem;
+  resize: none;
+  width:100%;
+}
+
+/* style untuk footer*/
+.footer{
+  background:#333;
+}
+
+.footer .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.footer .box-container .box{
+  padding:1rem 0;
+  flex:1 1 25rem;
+}
+
+.footer .box-container .box .features li{
+  display: block;
+  font-size: 1.5rem;
+  padding:.7rem 0;
+  color:#eee;
+}
+
+.footer .box-container .box h3{
+  font-size: 2.5rem;
+  padding:.7rem 0;
+  color:#fff;
+}
+
+.footer .box-container .box p{
+  font-size: 1.5rem;
+  padding:.7rem 0;
+  color:#eee;
+}
+
+.footer .box-container .box .email {
+  font-size: 1.5rem;
+  padding:.7rem 0;
+  color:#eee;
+}
+
+.footer .box-container .box .email span{
+  font-size: 1.5rem;
+  padding:.7rem 0;
+  color:#eee;
+  text-transform: lowercase;
+}
+
+.footer .box-container .box a{
+  display: block;
+  font-size: 1.5rem;
+  padding:.7rem 0;
+  color:#eee;
+}
+
+.footer .box-container .box a:hover{
+  color:var(--cyan);
+  text-decoration: underline;
+}
+
+.footer .neontext{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer .neontext ul{
+  position: relative;
+  display: flex;
+}
+
+.footer .neontext li{
+  list-style: none;
+}
+
+.footer.neontext li input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  z-index: 100;
+  
+}
+
+.footer .neontext div{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: #333;
+  color: cyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 46px;
+  cursor: pointer;
+  margin: 0 4px;
+  box-shadow: -1px -1px 4px rgba(188, 236, 11, 0.05), 4px 4px 6px rgba(212, 235, 7, 0.2),
+  inset -1px -1px 4px rgba(116, 236, 4, 0.05)
+  , inset 1px 1px 1px rgba(197, 252, 1, 0.1)
+}
+
+.footer.neontext li input[type="checkbox"]:checked ~ div {
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.05), 4px 4px 6px rgba(0, 0, 0, 0.2);
+  color: #ff0;
+  padding-top: 2rem;
+  text-shadow: 0 0 15px #ff0, 0 0 25px #ff0;
+  animation: glow 1.5s linear infinite;
+}
+
+@keyframes glow{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+.footer .credit{
+  text-align: center;
+  padding:2rem 1rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  color:#fff;
+  border-top: .1rem solid rgba(255,255,255,.2);
+}
+
+.footer .credit span{
+  color:var(--cyan);
+}
+
+
+/* media queries  */
+@media (max-width:1200px){
+
+  html{
+    font-size: 55%;
+  }
+
+}
+@media (max-width:991px){
+
+  header{
+    padding:2rem;
+  }
+
+  section{
+    padding:2rem;
+  }
+
+}
+
+@media (max-width:768px){
+
+  #menu-bar{
+    display: initial;
+  }
+
+  header .navbar{
+    position: absolute;
+    top:100%; right:0; left: 0;
+    background: #333;
+    border-top: .1rem solid rgba(255,255,255,.2);
+    padding:1rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a{
+    display: block;
+    border-radius: .5rem;
+    padding:1.5rem;
+    margin:1.5rem 0;    
+    background:#222;
+  }
+
+}
+
+@media (max-width:450px){
+
+  html{
+    font-size: 50%;
+  }
+
+  .heading span{
+    font-size: 2.5rem;
+  }
+
+  .contact .row form .inputBox input{
+    width:100%;
+  }
+
+}

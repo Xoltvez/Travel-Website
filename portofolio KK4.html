@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio KK 4</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styleporto.css">
+    <link rel="icon" href="assets/TRIPVEL-removebg-preview.png">
+</head>
+<body>
+    
+<!-- header -->
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="#" class="logo"><i class="fas fa-plane-departure"></i><span>Trip</span>Vel</a>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#booking">Booking</a>
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a href="#gallery">gallery</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+        <a href="shop.html"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+
+    <form action="hotel.html" method="get" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+
+<!-- login form container  -->
+
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form name="form_login">
+        <h3>login</h3>
+        <input type="text" class="box" name="username" placeholder="enter your username">
+        <input type="email" class="box" name= "email" placeholder="enter your email">
+        <input type="password" class="box" name="password"placeholder="enter your password">
+        <input type="submit" value="login now" class="btn" onclick="login()">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have and account? <a href="#">register now</a></p>
+    </form>
+
+</div>
+
+<!-- home -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>Hi there, GOING ANYWHERE?</h3>
+        <p>Find,  <span class="auto-type"></span></p>
+        <a href="https://www.google.com/" class="btn">discover more</a>
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="assets/vid-2.mp4"></span>
+        <span class="vid-btn" data-src="assets/vid-5.mp4"></span>
+        <span class="vid-btn" data-src="assets/vid-1.mp4"></span>
+        <span class="vid-btn" data-src="assets/vid-3.mp4"></span>
+        <span class="vid-btn" data-src="assets/vid-4.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="assets/vid-2.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+
+<!-- book -->
+
+<section class="book" id="booking">
+
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="assets/about-img.jpg" alt="">
+        </div>
+
+        <form action="connect.php" method="post">
+            <div class="inputBox">
+                <h3>Hotels Name</h3>
+                <input type="text" name="namahotel" placeholder="hotels name">
+            </div>
+            <div class="inputBox">
+                <h3>How many</h3>
+                <input type="number" name="orang" placeholder="number of guests">
+            </div>
+            <div class="inputBox">
+                <h3>how many rooms</h3>
+                <input type="number" name="kamar" placeholder="number of rooms">
+            </div>
+            <div class="inputBox">
+                <h3>Bed Type</h3>
+                <input type="text" name="bed_type" placeholder="Bed type">
+            </div>
+            <div class="inputBox">
+                <h3>Chek In</h3>
+                <input name="tanggal_chekin" type="date">
+            </div>
+            <div class="inputBox">
+                <h3>Chekout</h3>
+                <input name="tanggal_chekout"type="date">
+            </div>
+            
+            <input type="submit" class="btn" value="book now" >
+        </form>
+
+    </div>
+
+</section>
+
+<!-- packages -->
+
+<section class="packages" id="packages">
+    
+
+    <h1 class="heading">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+    
+
+    <div class="box-container">
+        
+
+        <div class="box">
+            
+            <img src="assets/Switzerland.webp" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Switzerland </h3>
+                <p></p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"> 4.9</i>
+                </div>
+
+                <a href="review_swis.html">Review</a>
+                
+                <div class="price"> Rp.10.502.500 <span>Rp.10.510.200</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="assets/Hawaii.jpeg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Hawaii </h3>
+                <p></p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"> 4.8</i>
+                </div>
+
+                <a href="review_swis.html">Review</a>
+                <div class="price"> Rp.9.720.400 <span>Rp.9.750.800</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="assets/Sydney.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Sydney </h3>
+                <p></p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"> 4.7</i>
+                </div>
+                <a href="review_swis.html">Review</a>
+                <div class="price"> Rp.10.200.500 <span>Rp.10.230.900</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="assets/paris.png" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> paris </h3>
+                <p></p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt">  4.9</i>
+                </div>
+                <a href="review_swis.html">Review</a>
+                <div class="price"> Rp.9.000.999 <span>Rp.9.050.000</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="assets/mogehan-sun2.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Hotel Mogehan Sun  </h3>
+                <p>1 Mohegan Sun Blvd, Montville, CT 06382.USA</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"> 4.9</i>
+                </div>
+                <a href="review_swis.html">Review</a>
+                <div class="price"> Rp.3.910.100 <span> Rp.4.100.000</span> </div>
+                <a href="mogehansun.html" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="assets/sheraton.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Hotel Sheraton Yogyakarta </h3>
+                <p>Street. Laksda Adisucipto No.KM.8, RW.7, Nayan, Maguwoharjo, Kec. Depok, Sleman Regency, Yogyakarta Special Region 55282</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"> 4.6</i>
+                </div>
+                <a href="review_swis.html">Review</a>
+                <div class="price"> Rp.1.080.000 <span>Rp.1.100.000</span> </div>
+                <a href="sheraton.html" class="btn">book now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- shop -->
+
+<section class="shop" id="shop">
+
+    <h1 class="heading">
+        <span>S</span>
+        <span>H</span>
+        <span>O</span>
+        <span>P</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="assets/camp3.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-shopping-cart"></i> Camp </h3>
+                <p>Bandung, West Java. Indonesia</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt">  4.7  <span>| soldout 38</span> </i>
+                </div>
+                <div class="price"> Rp.1.500.000 <span>Rp.1.750.000</span> </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="assets/jaket2.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-shopping-cart"></i> Jacket </h3>
+                <p>South Jakarta, Indonesia</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star">  4.9  <span>| soldout 109</span></i>
+                </div>
+                <div class="price"> Rp.160.900 <span>Rp.179.900</span> </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="assets/product-4.JPG" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-shopping-cart"></i> Shoes </h3>
+                <p>Surabaya, East Java. Indonesia</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"> 4.8 <span>| soldout 45</span></i>
+                </div>
+                <div class="price"> Rp.198.000 <span>Rp.200.000</span> </div>
+                <a href="#" class="btn">Add to cart</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- services -->
+
+<section class="services" id="services">
+
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>affordable hotels</h3>
+            <p></p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>food and drinks</h3>
+            <p></p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>safety guide</h3>
+            <p></p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>around the world</h3>
+            <p></p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>fastest travel</h3>
+            <p></p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>adventures and tourism</h3>
+            <p></p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- gallery -->
+
+<section class="gallery" id="gallery">
+
+    <h1 class="heading">
+        <span>g</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="assets/Raja Ampat-2.jpg" alt="">
+            <div class="content">
+                <h3>Raja Ampat</h3>
+                <p>Located in the islands of West Papua, Indonesia.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="assets/Borobudur.jpeg" alt="">
+            <div class="content">
+                <h3>Borobudur</h3>
+                <p>This temple with many stupas was founded by Mahayana Buddhist</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="assets/disney world.jpg" alt="">
+            <div class="content">
+                <h3>Disney World</h3>
+                <p>Disney World is an amusement park located in Florida, United States.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="assets/burjkhalifa.webp" alt="">
+            <div class="content">
+                <h3>Burj Khalifa</h3>
+                <p>Burj Khalifa, formerly known as Burj Dubai, 
+                    is a skyscraper in Dubai, United Arab Emirates.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="assets/Marina Bay Sands.webp" alt="">
+            <div class="content">
+                <h3>Marina Bay Sands</h3>
+                <p>5-star hotels and resorts with unique building designs.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="assets/pyramid.webp" alt="">
+            <div class="content">
+                <h3>Pyramid</h3>
+                <p>The ancient Egyptians and Mayans were known to use pyramid buildings as tombs for kings.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="assets/Pura Ulun.jpg" alt="">
+            <div class="content">
+                <h3>Pura Ulun </h3>
+                <p>is a large water temple and temple in Bali, Indonesia.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="assets/universal-singapore.jpeg" alt="">
+            <div class="content">
+                <h3>Universal Studios Singapore </h3>
+                <p>This place is for play and entertainment</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="assets/tanahlot.webp" alt="">
+            <div class="content">
+                <h3> Tanah Lot</h3>
+                <p>Tanah Lot Temple is one of the most sacred temples in Bali, Indonesia.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review -->
+
+<section class="review" id="review">
+
+    <h1 class="heading">
+        <span>r</span>
+        <span>e</span>
+        <span>v</span>
+        <span>i</span>
+        <span>e</span>
+        <span>w</span>
+    </h1>
+
+    <div class="swiper-container review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="assets/elon-musk.jpeg" alt="">
+                    <h3>Elon Musk</h3>
+                    <p>This website is very useful for the community and very useful. Nice view, good service. Joss deh</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt">  4.8</i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="assets/ABYAN 1.jpeg" alt="">
+                    <h3>Abyan</h3>
+                    <p>Makanan nya menggoda, bikin laper</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"> 6.0</i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="assets/jokowi.jpeg" alt="">
+                    <h3>Pak Joko Widodo</h3>
+                    <p>Websitenya bagus cuy, barangnya murah-murah. Pelayanan nya juga baik</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"> 4.9</i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="assets/megawati.jpeg" alt="">
+                    <h3>Bu Megawati</h3>
+                    <p>Jangan lupa beli bakso di website ini enakk bray. Hidup Banteng Merah!!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"> 5.0</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- contact -->
+
+<section class="contact" id="contact">
+    
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="assets/Contact.jpeg" alt="">
+        </div>
+
+        <form action="https://formspree.io/f/mrgdjyad" method="post">
+            <div class="inputBox">
+                <input type="text" name="nama" placeholder="name" required>
+                <input type="email" name="email" placeholder="email" required>
+            </div>
+            <div class="inputBox">
+                <input type="number" name="no hp" placeholder="numberphone" >
+                <input type="text" name="judul" placeholder="subject" >
+            </div>
+            <textarea placeholder="message" name="pesan" id="" cols="30" rows="10"></textarea>
+            <button type="submit" class="btn" onclick="openPopup()"> Send Message </button>
+        </form>
+    </div>
+</section>
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>My Website</h3>
+            <a href="index.html">Portofolio</a>
+        </div>
+        <div class="box">
+            <h3>features of this website</h3>
+            <div class="features">
+                <p>Train Ticket</p>
+                <p>Flight Ticket</p>
+                <p>Car Rental</p>
+                <p>Hotels</p>
+                <p>Shop</p>
+                <p>Villa</p>
+                <p>Tour</p>
+            </div>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home">home</a>
+            <a href="#booking">booking</a>
+            <a href="#packages">packages</a>
+            <a href="#services">services</a>
+            <a href="#gallery">gallery</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <p class="email">Email : <span>faizazzahra88@gmail.com</span></p>
+            <a href="https://www.instagram.com/faizazzahra88/">instagram</a>
+            <a href="https://youtube.com/channel/UCvooUR2rB7miznFljWeubcQ">youtube</a>
+            <a href="https://wa.me/6281225925028?text=Hello,">WhatsApp</a>
+        </div>
+
+    </div>
+    <div class="neontext">
+    <ul>
+        <li>
+            <div>T</div>
+        </li>
+        <li>
+            <div>R</div>
+        </li>
+        <li>
+            <div>I</div>
+        </li>
+        <li>
+            <div>P</div>
+        </li>
+        <li>
+            <div>V</div>
+        </li>
+        <li>
+            <div>E</div>
+        </li>
+        <li>
+            <div>L</div>
+        </li>
+    </ul>
+</div>
+    <h1 class="credit"> created by <span> Mas Faiz </span> | all rights reserved! </h1>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="scriptporto.js"></script>
+</body>
+</html>
